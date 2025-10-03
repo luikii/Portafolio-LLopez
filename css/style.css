@@ -19,3 +19,16 @@ header {
     margin-bottom: 50px;
     padding: 20px;
 }
+
+#foto-perfil {
+    border: solid rgb(71, 62, 156) 2px;
+    border-radius: 20px;
+}
+
+article{
+    border: solid 4px violet;
+    border-radius: 20px;
+    text-align: center;
+    width: 30%;
+    float: left;
+}
