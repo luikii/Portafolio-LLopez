@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+*{margin: none;}
 body {
-    background: green;
+    background: rgb(132, 162, 132);
 }
 
 h1,h2 {
@@ -16,8 +18,35 @@ p{
 header {
     text-align: center;
     border-bottom: solid 4px violet;
-    margin-bottom: 50px;
     padding: 20px;
+}
+#Menu-principal {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#Menu-principal ul{
+    list-style-type:none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#Menu-principal a{ 
+    text-decoration: none;
+    color: rgb(97, 26, 26);
+    font-weight: bolder;
+    font-family: 'Bitcount Grid Double Ink', cursive;
+    font-size: 20px;
+    padding : 10px;
+}
+
+#Menu-principal a:hover{
+    background-color: rgb(64, 234, 237);
+    color: white;
+    border-radius: 10px;
 }
 
 #foto-perfil {
@@ -25,10 +54,83 @@ header {
     border-radius: 20px;
 }
 
-article{
+#lista-proyectos{
+    display: flex;
+    gap : 10px;
+    flex-wrap: wrap;
+}
+#bienvenida {
+    background-color: rgb(49, 111, 116);
+    padding: 30px 0;
+}
+
+#experiencia {
+    background-color: seagreen;
+    padding: 30px 0;
+    border-top: solid 5px rgb(130, 238, 218);
+}
+.proyecto {
     border: solid 4px violet;
     border-radius: 20px;
     text-align: center;
     width: 30%;
-    float: left;
+    padding: 10px;
+}
+
+#habilidades {
+    background-color: rgb(189, 236, 59);
+    padding: 30px 0;
+}
+
+.lista-tecnologias {
+    list-style: none;
+    display: flex;
+    margin-left: 0;
+    gap: 10px;
+}
+.lista-tecnologias li {
+    background-color: rgb(88, 84, 191);
+    border: solid 2px rgb(110, 99, 177);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+progress{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#contacto {
+    padding: 30px 20px;
+    background-color: rgb(204, 152, 63);
+    border-top: solid 5px rgb(22, 54, 130);
+}
+
+#contacto label {
+    font-size: 20px;
+}
+
+#contacto input,textarea {
+    width: 30%;
+    border: solid 2px rgb(190, 78, 78);
+    padding: 10px;
+    width: 30%;
+}
+
+#contacto button {
+    background-color: rgb(190, 58, 216);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    font-size: 20px;
+}
+
+.campos {
+    clear: both;
+    padding-top: 20px;
 }
