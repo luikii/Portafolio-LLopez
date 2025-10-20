@@ -17,17 +17,17 @@
     <!-- Menu de Navegación-->
     <nav id="Menu-principal">
         <!-- crea un Enlace-->
-         <ul>
-             <li><a href="#bienvenida">Inicio</a></li>
-             <li><a href="#experiencia">Mi experiencia</a></li>
-             <li><a href="#habilidades">Mis habilidades</a></li>
-             <li><a href="#contacto">Contáctame</a></li>
-         </ul>
+        <ul>
+            <li><a href="#bienvenida">Inicio</a></li>
+            <li><a href="#experiencia">Mi experiencia</a></li>
+            <li><a href="#habilidades">Mis habilidades</a></li>
+            <li><a href="#contacto">Contáctame</a></li>
+        </ul>
     </nav>
 
     <!-- Parte principal-->
     <main>
-    <section id="bienvenida"> <!-- secciones de la pagina-->
+        <section id="bienvenida"> <!-- secciones de la pagina-->
             <!-- con la etiqueta mark podemos resaltar el nombre-->
 
             <h1> Bienvenidos a mi Portafolio profesional</h1>
@@ -44,7 +44,7 @@
             <h3>¿Sabias que....?</h3>
             <p>El desarrollo de software es una de las profesiones más demandadas en la actualidad.</p>
         </aside>
-        <section id = "experiencia">
+        <section id="experiencia">
             <h2> Experiencia profesional </h2>
             <div id="lista-proyectos">
                 <article class="proyecto">
@@ -88,10 +88,10 @@
             </div>
         </section>
 
-        <section id ="habilidades">
+        <section id="habilidades">
             <h2> Habilidades y competencias</h2>
             <h3> Lenguajes y Tecnologias</h3>
-            <ul class = "lista-tecnologias">
+            <ul class="lista-tecnologias">
                 <li>HTML5</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -100,42 +100,80 @@
             <h3> Niveles de dominio </h3>
             <div>
                 <label> HTML5 </label>
-                <progress max = "100" value="80"> 80% </progress>
+                <progress max="100" value="80"> 80% </progress>
             </div>
             <div>
                 <label> CSS </label>
-                <progress max = "100" value="80"> 80% </progress>
+                <progress max="100" value="80"> 80% </progress>
             </div>
             <div>
                 <label> JavaScript </label>
-                <progress max = "100" value="80"> 20% </progress>
+                <progress max="100" value="80"> 20% </progress>
             </div>
             <div>
                 <label> C# </label>
-                <progress max = "100" value="60"> 60% </progress>
+                <progress max="100" value="60"> 60% </progress>
             </div>
 
         </section>
-        <section id = "contacto">
+        <section id="contacto">
             <form>
                 <h2> Contactame</h2>
-                <div class = "campos">
-                <label>Nombre completo</label>
-                <input type="text" value ="" placeholder="Nombre completo" required/>
-                 </div>
-                <div class = "campos">
-                <label>Correo electrónico</label>
-                <input type="email" value ="" placeholder="Correo electrónico" required/>
+                <div class="campos">
+                    <label>Nombre completo</label>
+                    <input type="text" value="" placeholder="Nombre completo" required />
                 </div>
-                <div class = "campos">
-                <label>Mensaje</label>
-                <textarea placeholder="Escribe tu mensaje aqui"></textarea>
+                <div class="campos">
+                    <label>Correo electrónico</label>
+                    <input type="email" value="" placeholder="Correo electrónico" required />
+                </div>
+                <div class="campos">
+                    <label>Mensaje</label>
+                    <textarea placeholder="Escribe tu mensaje aqui"></textarea>
                 </div>
 
-                <div class = "campos">
+                <div class="campos">
+                    <label>Motivo</label>
+                    <select>
+                        <option>Cotización</option>
+                        <option>Prácticas profesionales</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+
+                <div class="campos">
+                    <label>Fecha</label>
+                    <input type="date" placeholder="aaaa-mm-dd" />
+                </div>
+
+                <div class="campos">
+                    <label>Metodo de contacto</label>
+                    <input type="checkbox" name="canal" class="opciones"> Whatsapp
+                    <input type="checkbox" name="canal" class="opciones"> Correo electrónico
+                </div>
+
+                <div class ="campos">
+                    <label>¿Es cliente?</label>
+                    <input type="radio" name="cliente" class="opciones"> Si
+                    <input type="radio" name="cliente" class="opciones"> No
+                </div>
+
+                <div class="campos">
+                    <label>Numero de colaboradores</label>
+                    <input type="number"/>
+                </div>
+
+                <div class="campos">
+                    <label>Enviar requerimientos:</label>
+                    <input type="file" name="Foto"/>
+                </div>
+
+                <div class="campos">
                     <!--<input type="button" value="Enviar"/>-->
                     <button type="submit">Enviar</button>
-                </div> 
+                </div>
+
+
             </form>
         </section>
 
