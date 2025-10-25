@@ -1,143 +1,298 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double+Ink:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
-*{margin: none;}
+/* Animación para cuando cargue la pagina */
+@keyframes slideInUp {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación */
+.animate-slideInUp {
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+/* Retrasos para elementos secuenciales */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* Reset y base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-    background: rgb(132, 162, 132);
+    background: #f0f4f8;
+    color: #2d3748;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
-h1,h2 {
-    font-family: 'Noto Sans JP', sans-serif;
-
-}
-p{
-    font-family: 'Bitcount Grid Double Ink', cursive;
+#bienvenida p {
+    color: #2d3748;
 }
 
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+    color: #1a202c;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+p, li, label {
+    font-family: 'Inter', sans-serif;
+    color: #4a5568;
+}
 
 header {
     text-align: center;
-    border-bottom: solid 4px violet;
-    padding: 20px;
-}
-#Menu-principal {
-    background-color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-align: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 28px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
 }
 
-#Menu-principal ul{
-    list-style-type:none;
+#Menu-principal {
+    background: #ffffff;
+    padding: 16px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+#Menu-principal ul {
+    list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 24px;
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
-
-#Menu-principal a{ 
+#Menu-principal a {
     text-decoration: none;
-    color: rgb(97, 26, 26);
-    font-weight: bolder;
-    font-family: 'Bitcount Grid Double Ink', cursive;
-    font-size: 20px;
-    padding : 10px;
+    color: #4a5568;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
 }
-
-#Menu-principal a:hover{
-    background-color: rgb(64, 234, 237);
-    color: white;
-    border-radius: 10px;
+#Menu-principal a:hover {
+    background: #2b6cb0;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(43,108,176,0.2);
 }
 
 #foto-perfil {
-    border: solid rgb(71, 62, 156) 2px;
-    border-radius: 20px;
+    border: 3px solid #00f2fe;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    box-shadow: 0 4px 18px #00f2fe33;
+    margin: 18px 0 0 18px;
+    float: right;
 }
 
-#lista-proyectos{
-    display: flex;
-    gap : 10px;
-    flex-wrap: wrap;
+.foto-perfil-container {
+    text-align: right;
 }
+
 #bienvenida {
-    background-color: rgb(49, 111, 116);
-    padding: 30px 0;
+    background: #ffffff;
+    color: #2d3748;
+    padding: 48px 32px;
+    border-radius: 12px;
+    margin: 40px 0 32px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    opacity: 0;
+    animation: slideInUp 0.6s ease-out forwards;
+}
+#bienvenida h1 {
+    color: #1a202c;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#bienvenida mark {
+    background: #2b6cb0;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+#lista-proyectos {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.proyecto {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: left;
+    width: 30%;
+    min-width: 280px;
+    padding: 24px;
+    color: #2d3748;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+ul {
+    list-style: none;
+}
+.proyecto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.06);
+    border-color: #2b6cb0;
 }
 
 #experiencia {
-    background-color: seagreen;
-    padding: 30px 0;
-    border-top: solid 5px rgb(130, 238, 218);
-}
-.proyecto {
-    border: solid 4px violet;
-    border-radius: 20px;
-    text-align: center;
-    width: 30%;
-    padding: 10px;
+    background: linear-gradient(90deg, #00f2fe 0%, #4facfe 100%);
+    color: #1a1a2e;
+    padding: 32px 0;
+    border-top: 5px solid #ff512f;
+    border-radius: 0 0 18px 18px;
+    margin-bottom: 32px;
 }
 
 #habilidades {
-    background-color: rgb(189, 236, 59);
-    padding: 30px 0;
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: #1a1a2e;
+    padding: 32px 0;
+    border-radius: 18px;
+    margin-bottom: 32px;
+    box-shadow: 0 6px 24px #43e97b33;
 }
 
 .lista-tecnologias {
     list-style: none;
     display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
     margin-left: 0;
-    gap: 10px;
+    justify-content: center;
 }
 .lista-tecnologias li {
-    background-color: rgb(88, 84, 191);
-    border: solid 2px rgb(110, 99, 177);
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
+    background: #edf2f7;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: #2d3748;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+.lista-tecnologias li:hover { /*Agregamos efecto cuando el cursor este encima de la tecnologia*/
+    background: #2b6cb0; 
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-progress{
+progress {
     width: 100%;
-    height: 25px;
-    border-radius: 5px;
-    margin: 10px 0;
+    height: 18px;
+    border-radius: 8px;
+    margin: 12px 0;
+    background: #22223b;
+    box-shadow: 0 2px 8px #00f2fe22;
+}
+progress::-webkit-progress-bar { /* Para Chrome, Safari y Opera Sirve para que se vea de diferente color la barra */ 
+    background: #22223b;
+    border-radius: 8px;
+}
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #ff512f 0%, #00f2fe 100%);
+    border-radius: 8px;
+}
+progress::-moz-progress-bar { 
+    background: linear-gradient(90deg, #ff512f 0%, #00f2fe 100%);
+    border-radius: 8px;
 }
 
 #contacto {
-    padding: 30px 20px;
-    background-color: rgb(204, 152, 63);
-    border-top: solid 5px rgb(22, 54, 130);
+    padding: 40px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    color: #2d3748;
+    margin-bottom: 32px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 #contacto label {
-    font-size: 20px;
+    font-size: 16px;
     width: 200px;
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
 }
-
-#contacto input,textarea,select {
-    width: 30%;
-    border: solid 2px rgb(190, 78, 78);
-    padding: 10px;
-    width: 30%;
+#contacto input, textarea, select {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-size: 15px;
+    background: #ffffff;
+    color: #2d3748;
+    transition: all 0.2s ease;
 }
-
+#contacto input:focus, #contacto textarea:focus, #contacto select:focus {
+    border-color: #2b6cb0;
+    box-shadow: 0 0 0 3px rgba(43,108,176,0.1);
+    outline: none;
+}
 #contacto button {
-    background-color: rgb(190, 58, 216);
-    color: white;
-    padding: 20px 30px;
-    border-radius: 10px;
+    background: #2b6cb0;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
     border: none;
-    width: 200px;
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#contacto button:hover {
+    background: #00f2fe;
+    color: #1a1a2e;
+    box-shadow: 0 4px 18px #00f2fe55;
 }
 
 .campos {
     clear: both;
-    padding-top: 20px;
+    padding-top: 18px;
 }
 
 #contacto .opciones {
-    width: 10px;
-    padding: 10px;
-
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #ff512f; /* Cambia el color de los checkboxes y radios */
 }
+
+footer {
+    text-align: center;
+    padding: 32px 20px;
+    color: #4a5568;
+    font-size: 14px;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    letter-spacing: 0.5px; /* Cambia el espacio que hay en dentro de una letra a otra */
+}
+
+
